@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const celebrationElement = document.getElementById('celebration');
 
     // Set the date we're counting down to
-    const countdownDate = new Date("June 14, 2024 24:00:00").getTime();
+    const countdownDate = new Date("June 30, 2024 24:00:00").getTime();
 
     // Update the countdown every 1 second
     const countdownFunction = setInterval(() => {

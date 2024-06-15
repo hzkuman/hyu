@@ -3,15 +3,43 @@ body {
     color: white;
     font-family: 'Arial', sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     margin: 0;
     overflow: hidden;
 }
 
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    width: 150px;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
 .container {
     text-align: center;
+    margin-top: 50px;
 }
 
 .countdown h1 {
@@ -77,3 +105,45 @@ body {
 .confetti:nth-child(3n) { background: green; }
 .confetti:nth-child(4n) { background: blue; }
 .confetti:nth-child(5n) { background: pink; }
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .countdown h1 {
+        font-size: 2em;
+    }
+
+    #timer {
+        font-size: 1.5em;
+    }
+
+    .rocket {
+        margin-top: 20px;
+    }
+
+    #rocket {
+        width: 80px;
+    }
+
+    .message {
+        font-size: 1.5em;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .social-icon {
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+}
+
