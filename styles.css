@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(to bottom, #000428, #06049ab8);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.countdown h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 2em;
+}
+
+.rocket {
+    margin-top: 50px;
+    position: relative;
+    animation: launch 10s infinite;
+}
+
+#rocket {
+    width: 100px;
+}
+
+@keyframes launch {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.message {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.celebration {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+@keyframes confetti {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(100%);}
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    animation: confetti 5s infinite;
+}
+
+.confetti:nth-child(2n) { background: yellow; }
+.confetti:nth-child(3n) { background: green; }
+.confetti:nth-child(4n) { background: blue; }
+.confetti:nth-child(5n) { background: pink; }
